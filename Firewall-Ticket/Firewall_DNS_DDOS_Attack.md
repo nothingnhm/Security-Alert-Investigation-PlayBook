@@ -1,6 +1,6 @@
 # SOC Analyst Investigation Report
 
-**Ticket ID:** CS-0188
+**Ticket ID:** CS-01
 **Alert Name:** Firewall: DNS DDoS Attack
 
 ---
@@ -19,7 +19,7 @@ Based on the available evidence, there is **no indication that the traffic was s
 
 | Field               | Details                                                                                                  |
 | ------------------- | -------------------------------------------------------------------------------------------------------- |
-| Ticket ID           | CS-0188                                                                                                  |
+| Ticket ID           | CS-01                                                                                                    |
 | Alert Name          | Firewall: DNS DDoS Attack                                                                                |
 | Severity            | Medium                                                                                                   |
 | Receive Time        | 2/10/2025 16:07                                                                                          |
