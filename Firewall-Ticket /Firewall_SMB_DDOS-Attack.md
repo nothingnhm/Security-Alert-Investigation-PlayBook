@@ -1,4 +1,4 @@
-# Ticket CS-0190 — Firewall: SMB DDoS Attack
+# Ticket Firewall: SMB DDoS Attack
 
 > **Portfolio Type:** SOC L1 Alert Triage Case Study  
 > **Format:** One ticket = one page  
@@ -10,7 +10,7 @@
 
 | Field | Details |
 |---|---|
-| Ticket ID | CS-0190 |
+| Ticket ID | CS-02 |
 | Alert Name | Firewall: SMB DDoS Attack |
 | Ticket Status | In Progress |
 | Priority | High |
@@ -147,7 +147,7 @@ The firewall blocked inbound traffic from `192.42.116.210` to `10.0.14.29` on de
 
 ## 9. Closure / Analyst Note
 
-SOC investigated ticket `CS-0190` related to a firewall alert for `SMB DDoS Attack`. Logs showed inbound traffic from external source IP `192.42.116.210` to internal destination `10.0.14.29` on destination port `445/SMB`.
+SOC investigated ticket `CS-02` related to a firewall alert for `SMB DDoS Attack`. Logs showed inbound traffic from external source IP `192.42.116.210` to internal destination `10.0.14.29` on destination port `445/SMB`.
 
 Splunk confirmed `245` matching events. All observed events were blocked by the firewall. No evidence of successful traffic delivery, allowed SMB connection, internal host compromise, or service impact was identified.
 
