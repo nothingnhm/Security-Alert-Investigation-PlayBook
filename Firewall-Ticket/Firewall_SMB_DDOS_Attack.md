@@ -202,16 +202,23 @@ Splunk review confirmed `245` matching blocked events. No allowed SMB traffic, s
 
 ---
 
-## 11. Portfolio Redaction Note
+## ⚠️ Disclaimer
 
-Before publishing this ticket publicly, redact:
+This repository is created for educational, portfolio, and career development purposes only.
 
-- Real email addresses
-- Real requester or analyst names
-- Organization names
-- Internal usernames
-- Ticketing URLs
-- Customer-sensitive information
-- Any private infrastructure details not required for the case study
+All scenarios are sanitized and written in a safe format. No confidential company information, client data, or real production logs are included.
 
-Keep only sanitized technical evidence needed to demonstrate SOC investigation skills.
+---
+
+## 👤 Author
+
+**Ananda Das**
+Cybersecurity Student | SOC Analyst Learner | SIEM, Threat Detection & Incident Response Enthusiast
+
+GitHub: [@nothingnhm](https://github.com/nothingnhm)
+
+---
+
+## ⭐ Repository Purpose
+
+This project is part of my cybersecurity portfolio to demonstrate practical experience in ticket triage, IT troubleshooting, SOC alert analysis, and professional documentation.
