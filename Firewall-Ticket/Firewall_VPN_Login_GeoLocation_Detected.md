@@ -4,7 +4,7 @@
 
 | Field            | Details                                         |
 | ---------------- | ----------------------------------------------- |
-| Ticket ID        | CS-0199                                         |
+| Ticket ID        | CS-012                                          |
 | Alert Name       | Firewall: VPN Login GeoLocation Detected        |
 | Ticket Status    | Closed                                          |
 | Priority / SLA   | Normal / Medium                                 |
@@ -138,7 +138,7 @@ This is **not confirmed account compromise** based on the provided evidence. Use
 
 ## Final Ticket Closure Comment
 
-SOC investigated ticket **CS-0199 — Firewall: VPN Login GeoLocation Detected**. Firewall logs show inbound VPN traffic from **201.172.173.50** to **10.0.2.12 / IvantiVPN01** on **4500/UDP**, with action **allowed** and geolocation context observed. VPN logs show authentication initiated for **priya.verma** from an **iOS / iPhone 14 Pro** device, with MFA status **Prompted**. No successful VPN login, MFA approval, internal access, endpoint compromise, or data access was confirmed from the provided evidence. User validation and VPN authentication result review are required; escalate if the user denies the activity or if successful login/MFA approval is confirmed.
+SOC investigated ticket **CS-012— Firewall: VPN Login GeoLocation Detected**. Firewall logs show inbound VPN traffic from **201.172.173.50** to **10.0.2.12 / IvantiVPN01** on **4500/UDP**, with action **allowed** and geolocation context observed. VPN logs show authentication initiated for **priya.verma** from an **iOS / iPhone 14 Pro** device, with MFA status **Prompted**. No successful VPN login, MFA approval, internal access, endpoint compromise, or data access was confirmed from the provided evidence. User validation and VPN authentication result review are required; escalate if the user denies the activity or if successful login/MFA approval is confirmed.
 
 ## Skills Demonstrated
 
