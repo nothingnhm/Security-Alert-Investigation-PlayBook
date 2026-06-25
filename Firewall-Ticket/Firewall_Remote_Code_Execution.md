@@ -9,8 +9,7 @@
 | Ticket Status    | Closed                                    |
 | Priority / SLA   | Normal / Medium                           |
 | Created Date     | 3/2/25 7:44 PM                            |
-| Closed By        | sushanth P                                |
-| Close Date       | 6/20/26 10:05 AM                          |
+| Closed By        | Ananda Das                                |
 | Analyst Decision | **True Positive — Prevented RCE Attempt** |
 
 ## Executive Summary
