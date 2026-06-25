@@ -9,8 +9,7 @@
 | Ticket Status    | Closed                                                 |
 | Priority / SLA   | High / High                                            |
 | Created Date     | 3/2/25 7:45 PM                                         |
-| Closed By        | sushanth P                                             |
-| Close Date       | 6/19/26 11:51 AM                                       |
+| Closed By        | Ananda Das                                             |
 | Analyst Decision | **True Positive — Blocked DNS Amplification Activity** |
 
 ## Executive Summary
