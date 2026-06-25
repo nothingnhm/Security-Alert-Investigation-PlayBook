@@ -10,7 +10,6 @@
 | Ticket Priority / SLA | Low / Medium                                                         |
 | Created Date          | 3/2/25 7:45 PM                                                       |
 | Closed By             | ananda das                                                           |
-| Close Date            | 6/22/26 12:49 AM                                                     |
 | Analyst Decision      | **False Positive — Authorized Qualys Scanner Activity**              |
 
 ## Executive Summary
