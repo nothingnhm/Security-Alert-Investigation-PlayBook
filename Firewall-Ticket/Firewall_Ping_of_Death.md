@@ -9,8 +9,7 @@
 | Ticket Status    | Closed                                       |
 | Priority / SLA   | Normal / High                                |
 | Created Date     | 3/2/25 7:45 PM                               |
-| Closed By        | sushanth P                                   |
-| Close Date       | 6/20/26 9:47 AM                              |
+| Closed By        | Ananda Das                                   |
 | Analyst Decision | **True Positive — Blocked ICMP DoS Attempt** |
 
 ## Executive Summary
