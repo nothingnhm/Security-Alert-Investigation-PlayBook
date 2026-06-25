@@ -29,7 +29,7 @@ No successful file disclosure, unauthorized file access, web server compromise, 
 | Source Port            | 43544                                                                                                    |
 | Destination IP         | 10.0.2.32                                                                                                |
 | Destination Port       | 443                                                                                                      |
-| Site Name              | it.cybersecxperts.com                                                                                    |
+| Site Name              | it.abc.com                                                                                               |
 | Initial URL            | /admin                                                                                                   |
 | Initial Matched String | `../../../../../etc/passwd`                                                                              |
 | Threat Name            | Directory Traversal                                                                                      |
