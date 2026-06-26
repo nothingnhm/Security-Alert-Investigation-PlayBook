@@ -9,7 +9,7 @@
 | Ticket Status    | In Progress                                         |
 | Priority / SLA   | Low / Default SLA                                   |
 | Created Date     | 3/2/25 7:45 PM                                      |
-| Assigned To      | amol shelke / SOC Team                              |
+| Assigned To      | Ananda Das / SOC Team                               |
 | Analyst Decision | **Needs Escalation — User Validation Required**     |
 
 ## Executive Summary
