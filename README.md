@@ -1,12 +1,12 @@
 # Triage-Ticketing-Portfolio
-A professional internship case-study repository documenting 100+ solved IT support and cybersecurity tickets, including issue analysis, troubleshooting steps, root cause identification, resolution notes, escalation handling, and key learning outcomes.
+A professional case-study repository documenting 100+ solved IT support and cybersecurity tickets, including issue analysis, troubleshooting steps, root cause identification, resolution notes, escalation handling, and key learning outcomes.
 
 
 # SOC Ticket Triage Case Studies
 
 ## 📌 Project Overview
 
-This repository is a professional portfolio project documenting **100+ sanitized IT support and cybersecurity ticket case studies** based on internship-style practical experience.
+This repository is a professional portfolio project documenting **100+ sanitized IT support and cybersecurity ticket case studies** based practical experience.
 
 The main goal of this project is to demonstrate how tickets are analyzed, triaged, investigated, resolved, documented, and escalated in a real-world IT/SOC environment.
 
