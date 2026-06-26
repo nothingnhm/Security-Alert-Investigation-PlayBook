@@ -16,7 +16,7 @@
 
 A WAF alert was triggered for **Cross-Site Scripting** involving inbound HTTPS traffic from external source IP **45.227.255.2** to internal web server **10.0.2.32 / LinITWebServer01** on **443/TCP**.
 
-The initial request targeted **it.cybersecxperts.com/admin** with an XSS payload attempting JavaScript execution and possible cookie access using `document.cookie`. The initial event showed **Allowed** while the WAF was in **Monitoring** mode; however, the response code was **401**, meaning successful access was not confirmed. Later WAF logs showed repeated XSS attempts from the same source were **Blocked** in **Blocking** mode with HTTP **403**.
+The initial request targeted **it.abc.com/admin** with an XSS payload attempting JavaScript execution and possible cookie access using `document.cookie`. The initial event showed **Allowed** while the WAF was in **Monitoring** mode; however, the response code was **401**, meaning successful access was not confirmed. Later WAF logs showed repeated XSS attempts from the same source were **Blocked** in **Blocking** mode with HTTP **403**.
 
 No successful XSS execution, session theft, user compromise, application compromise, or service impact was confirmed from the provided evidence.
 
@@ -133,7 +133,7 @@ This is **not confirmed compromise**. No successful XSS execution, session theft
 
 ## Final Ticket Closure Comment
 
-SOC investigated ticket **CS-025 — WAF: Cross-Site Scripting**. Inbound HTTPS traffic from **45.227.255.2** to **10.0.2.32 / LinITWebServer01** targeted **it.cybersecxperts.com** with XSS payloads attempting JavaScript execution and cookie access via `document.cookie`. The initial event was allowed while WAF was in Monitoring mode but returned HTTP **401**. Later related events were blocked in Blocking mode with HTTP **403**. No successful XSS execution, session theft, user compromise, application compromise, or service impact was observed. Ticket closed as **True Positive — Denied/Blocked by WAF**, with source IP blocking and WAF/IPS rule enforcement recommended.
+SOC investigated ticket **CS-025 — WAF: Cross-Site Scripting**. Inbound HTTPS traffic from **45.227.255.2** to **10.0.2.32 / LinITWebServer01** targeted **it.abc.com** with XSS payloads attempting JavaScript execution and cookie access via `document.cookie`. The initial event was allowed while WAF was in Monitoring mode but returned HTTP **401**. Later related events were blocked in Blocking mode with HTTP **403**. No successful XSS execution, session theft, user compromise, application compromise, or service impact was observed. Ticket closed as **True Positive — Denied/Blocked by WAF**, with source IP blocking and WAF/IPS rule enforcement recommended.
 
 ## Skills Demonstrated
 
