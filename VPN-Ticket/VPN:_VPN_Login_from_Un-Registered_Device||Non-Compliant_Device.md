@@ -4,7 +4,7 @@
 
 | Field             | Details                                                                                          |
 | ----------------- | ------------------------------------------------------------------------------------------------ |
-| Ticket ID         | CS-0274                                                                                          |
+| Ticket ID         | CS-074                                                                                          |
 | Alert Name        | VPN:- VPN Login from Un-Registered Device / Non-Compliant Device                                 |
 | Incident Category | VPN / Device Compliance Alert                                                                    |
 | Ticket Status     | Closed                                                                                           |
@@ -360,8 +360,31 @@ Escalate to **SOC L2 / Identity / Endpoint Team** if:
 
 ## Final Ticket Closure Comment
 
-SOC investigated ticket **CS-0274 — VPN Login from Un-Registered Device / Non-Compliant Device** for user `willam.dam`. VPN logs showed password authentication initiation from source IP `172.58.20.30` toward destination `10.0.2.12` on VPN device `IvantiVPN01` under realm `Corporate_VPN`. The login was performed from iOS device `iPhone14Pro`, which was identified as unregistered or non-compliant. Splunk evidence confirmed MFA challenge generation, successful authentication, active VPN session creation with `FullAccess`, and idle timeout after 30 minutes. No brute-force activity, MFA failure, suspicious disconnect reason, endpoint compromise, lateral movement, or data exfiltration was observed from the provided logs. User validation and IT/Endpoint device compliance review were recommended. Ticket closed as **User Validation Required — Successful VPN Login from Unregistered / Non-Compliant iOS Device / No Confirmed Malicious Activity**.
+SOC investigated ticket **CS-074 — VPN Login from Un-Registered Device / Non-Compliant Device** for user `willam.dam`. VPN logs showed password authentication initiation from source IP `172.58.20.30` toward destination `10.0.2.12` on VPN device `IvantiVPN01` under realm `Corporate_VPN`. The login was performed from iOS device `iPhone14Pro`, which was identified as unregistered or non-compliant. Splunk evidence confirmed MFA challenge generation, successful authentication, active VPN session creation with `FullAccess`, and idle timeout after 30 minutes. No brute-force activity, MFA failure, suspicious disconnect reason, endpoint compromise, lateral movement, or data exfiltration was observed from the provided logs. User validation and IT/Endpoint device compliance review were recommended. Ticket closed as **User Validation Required — Successful VPN Login from Unregistered / Non-Compliant iOS Device / No Confirmed Malicious Activity**.
 
 ## Skills Demonstrated
 
 VPN log analysis, Splunk investigation, non-compliant device login triage, mobile device access review, authentication event validation, MFA success review, VPN session analysis, device compliance assessment, IOC extraction, user validation planning, MITRE ATT&CK reference mapping, containment decision-making, escalation criteria definition, and SOC ticket documentation.
+
+---
+
+## ⚠️ Disclaimer
+
+This repository is created for educational, portfolio, and career development purposes only.
+
+All scenarios are sanitized and written in a safe format. No confidential company information, client data, or real production logs are included.
+
+---
+
+## 👤 Author
+
+**Ananda Das**
+Cybersecurity Student | SOC Analyst Learner | SIEM, Threat Detection & Incident Response Enthusiast
+
+GitHub: [@nothingnhm](https://github.com/nothingnhm)
+
+---
+
+## ⭐ Repository Purpose
+
+This project is part of my cybersecurity portfolio to demonstrate practical experience in ticket triage, IT troubleshooting, SOC alert analysis, and professional documentation.
