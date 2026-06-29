@@ -4,7 +4,7 @@
 
 | Field             | Details                                                               |
 | ----------------- | --------------------------------------------------------------------- |
-| Ticket ID         | CS-0350                                                               |
+| Ticket ID         | CS-082                                                                |
 | Alert Name        | Linux:- Suspicious Cron Job or Scheduled Task Creation                |
 | Incident Category | Linux / Cron Job Modification                                         |
 | Ticket Status     | Closed                                                                |
@@ -342,7 +342,7 @@ Escalation would be required only if:
 
 ## Final Ticket Closure Comment
 
-SOC investigated ticket **CS-0350 — Suspicious Cron Job or Scheduled Task Creation** on host `LinMRDB06 / 10.0.15.28`. Splunk Linux logs showed that user `Arun Jain`, identified as a Linux Lead, executed `crontab -e` from source address `10.1.4.143`, followed by a successful command adding `0 2 * * * /usr/local/bin/backup.sh` to `/var/spool/cron/root`. The cron entry schedules `/usr/local/bin/backup.sh` to run daily at `02:00 AM`, which is consistent with backup automation. No malicious payload, encoded command, reverse shell, unauthorized account creation, suspicious file modification, data exfiltration, or compromise indicator was observed in the provided logs. The event was assessed as authorized administrative activity and closed as **False Positive — Authorized Backup Cron Job Creation / No Malicious Activity Observed**.
+SOC investigated ticket **CS-082 — Suspicious Cron Job or Scheduled Task Creation** on host `LinMRDB06 / 10.0.15.28`. Splunk Linux logs showed that user `Arun Jain`, identified as a Linux Lead, executed `crontab -e` from source address `10.1.4.143`, followed by a successful command adding `0 2 * * * /usr/local/bin/backup.sh` to `/var/spool/cron/root`. The cron entry schedules `/usr/local/bin/backup.sh` to run daily at `02:00 AM`, which is consistent with backup automation. No malicious payload, encoded command, reverse shell, unauthorized account creation, suspicious file modification, data exfiltration, or compromise indicator was observed in the provided logs. The event was assessed as authorized administrative activity and closed as **False Positive — Authorized Backup Cron Job Creation / No Malicious Activity Observed**.
 
 ## Skills Demonstrated
 
