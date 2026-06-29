@@ -4,7 +4,7 @@
 
 | Field             | Details                                                                          |
 | ----------------- | -------------------------------------------------------------------------------- |
-| Ticket ID         | CS-0273                                                                          |
+| Ticket ID         | CS-067                                                                          |
 | Alert Name        | VPN:- Password Brute Force Attack Detected                                       |
 | Incident Category | VPN / Password Brute Force                                                       |
 | Ticket Status     | Closed                                                                           |
@@ -305,8 +305,31 @@ Escalate to **SOC L2 / Identity Team / Endpoint Security** if any of the followi
 
 ## Final Ticket Closure Comment
 
-SOC investigated ticket **CS-0273 — VPN Password Brute Force Attack Detected** for user `samuel.green`. VPN logs showed repeated password authentication initiation from source IP `185.141.132.26` toward destination `10.0.2.12` on VPN device `IvantiVPN01` under realm `Corporate_VPN`. The activity included multiple failed password authentication events due to incorrect password entry and resulted in account lockout after the retry limit was exceeded. The source IP had **8% abuse confidence**, but it was associated with data center / web hosting / transit infrastructure from Iran, making the activity suspicious when combined with the failed login pattern. No successful VPN session, endpoint compromise, lateral movement, or data exfiltration was observed. IT Helpdesk coordination was required to reset/unlock the account, the source IP was blocked/recommended for blocking, and continued monitoring was advised. Ticket closed as **True Positive — VPN Password Brute Force Attempt / Account Lockout Triggered / No Successful VPN Session Observed**.
+SOC investigated ticket **CS-067 — VPN Password Brute Force Attack Detected** for user `samuel.green`. VPN logs showed repeated password authentication initiation from source IP `185.141.132.26` toward destination `10.0.2.12` on VPN device `IvantiVPN01` under realm `Corporate_VPN`. The activity included multiple failed password authentication events due to incorrect password entry and resulted in account lockout after the retry limit was exceeded. The source IP had **8% abuse confidence**, but it was associated with data center / web hosting / transit infrastructure from Iran, making the activity suspicious when combined with the failed login pattern. No successful VPN session, endpoint compromise, lateral movement, or data exfiltration was observed. IT Helpdesk coordination was required to reset/unlock the account, the source IP was blocked/recommended for blocking, and continued monitoring was advised. Ticket closed as **True Positive — VPN Password Brute Force Attempt / Account Lockout Triggered / No Successful VPN Session Observed**.
 
 ## Skills Demonstrated
 
 VPN log analysis, Splunk investigation, password brute-force triage, failed authentication review, account lockout analysis, source IP reputation review, IOC extraction, identity risk validation, MITRE ATT&CK mapping, IT Helpdesk coordination, containment recommendation, user validation, escalation decision-making, and SOC ticket documentation.
+
+---
+
+## ⚠️ Disclaimer
+
+This repository is created for educational, portfolio, and career development purposes only.
+
+All scenarios are sanitized and written in a safe format. No confidential company information, client data, or real production logs are included.
+
+---
+
+## 👤 Author
+
+**Ananda Das**
+Cybersecurity Student | SOC Analyst Learner | SIEM, Threat Detection & Incident Response Enthusiast
+
+GitHub: [@nothingnhm](https://github.com/nothingnhm)
+
+---
+
+## ⭐ Repository Purpose
+
+This project is part of my cybersecurity portfolio to demonstrate practical experience in ticket triage, IT troubleshooting, SOC alert analysis, and professional documentation.
