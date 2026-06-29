@@ -4,7 +4,7 @@
 
 | Field             | Details                                                                         |
 | ----------------- | ------------------------------------------------------------------------------- |
-| Ticket ID         | CS-0264                                                                         |
+| Ticket ID         | CS-068                                                                         |
 | Alert Name        | VPN:- Password Brute Force Attack Detected                                      |
 | Incident Category | VPN / Authentication Attack                                                     |
 | Ticket Status     | Closed                                                                          |
@@ -281,8 +281,31 @@ Escalate to **SOC L2 / Identity Team** if any of the following are identified:
 
 ## Final Ticket Closure Comment
 
-SOC investigated ticket **CS-0264 — VPN Password Brute Force Attack Detected** for user `ajay.malhotra`. VPN logs showed repeated password authentication initiation from external source IP `103.91.136.18` toward VPN destination `10.0.2.12` on VPN device `IvantiVPN01` under realm `Corporate_VPN`. The activity generated multiple MFA OTP challenges, followed by repeated MFA failures due to incorrect OTP entries. The source IP had **100% abuse confidence**, and the pattern was consistent with a brute-force or credential-stuffing attempt against a valid VPN account. No successful VPN session, MFA bypass, endpoint compromise, lateral movement, or data exfiltration was observed. Source IP `103.91.136.18` was blocked, user credentials for `ajay.malhotra` were reset, and continued monitoring was recommended. Ticket closed as **True Positive — VPN Brute Force Attempt / MFA Prevented Unauthorized Access / No Confirmed Compromise**.
+SOC investigated ticket **CS-068 — VPN Password Brute Force Attack Detected** for user `ajay.malhotra`. VPN logs showed repeated password authentication initiation from external source IP `103.91.136.18` toward VPN destination `10.0.2.12` on VPN device `IvantiVPN01` under realm `Corporate_VPN`. The activity generated multiple MFA OTP challenges, followed by repeated MFA failures due to incorrect OTP entries. The source IP had **100% abuse confidence**, and the pattern was consistent with a brute-force or credential-stuffing attempt against a valid VPN account. No successful VPN session, MFA bypass, endpoint compromise, lateral movement, or data exfiltration was observed. Source IP `103.91.136.18` was blocked, user credentials for `ajay.malhotra` were reset, and continued monitoring was recommended. Ticket closed as **True Positive — VPN Brute Force Attempt / MFA Prevented Unauthorized Access / No Confirmed Compromise**.
 
 ## Skills Demonstrated
 
 VPN log analysis, Splunk investigation, authentication event triage, brute-force detection, MFA failure analysis, source IP reputation review, IOC extraction, account compromise validation, MITRE ATT&CK mapping, containment planning, user validation, escalation decision-making, and SOC ticket documentation.
+
+---
+
+## ⚠️ Disclaimer
+
+This repository is created for educational, portfolio, and career development purposes only.
+
+All scenarios are sanitized and written in a safe format. No confidential company information, client data, or real production logs are included.
+
+---
+
+## 👤 Author
+
+**Ananda Das**
+Cybersecurity Student | SOC Analyst Learner | SIEM, Threat Detection & Incident Response Enthusiast
+
+GitHub: [@nothingnhm](https://github.com/nothingnhm)
+
+---
+
+## ⭐ Repository Purpose
+
+This project is part of my cybersecurity portfolio to demonstrate practical experience in ticket triage, IT troubleshooting, SOC alert analysis, and professional documentation.
