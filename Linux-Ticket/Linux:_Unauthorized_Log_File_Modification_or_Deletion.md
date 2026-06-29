@@ -4,7 +4,7 @@
 
 | Field             | Details                                                                              |
 | ----------------- | ------------------------------------------------------------------------------------ |
-| Ticket ID         | CS-0353                                                                              |
+| Ticket ID         | CS-081                                                                               |
 | Alert Name        | Linux:- Unauthorized Log File Modification or Deletion                               |
 | Incident Category | Linux / Log Tampering / Defense Evasion                                              |
 | Ticket Status     | Closed                                                                               |
@@ -357,8 +357,31 @@ Escalate to **SOC L2 / Linux Team / Incident Response** if:
 
 ## Final Ticket Closure Comment
 
-SOC investigated ticket **CS-0353 — Unauthorized Log File Modification or Deletion** for host `LinQAWebServer07 / 10.0.15.16`. Splunk Linux logs showed that user `William Malhotra`, identified as a Linux Admin, successfully executed `vi /var/log/audit/audit.log` from source address `10.1.1.54` at `2025-05-12 11:30`, followed by successful execution of `rm /var/log/auth.log` at `2025-05-12 11:31`. The commands were executed from `/home/william` and both events completed successfully. The activity is suspicious because audit and authentication logs are security-relevant, and modification or deletion can reduce forensic visibility. No direct compromise was confirmed from the provided logs alone because the activity was performed by a Linux Admin account. SOC recommended validating the activity with William Malhotra and the Linux Team, confirming an approved change or maintenance record, restoring deleted logs if required, checking authentication activity before/after deletion, and escalating if the activity was not approved. Ticket closed as **Suspicious Log Modification / Deletion Activity — Linux Team Validation Required / Security Log Files Modified and Deleted Successfully**.
+SOC investigated ticket **CS-081 — Unauthorized Log File Modification or Deletion** for host `LinQAWebServer07 / 10.0.15.16`. Splunk Linux logs showed that user `William Malhotra`, identified as a Linux Admin, successfully executed `vi /var/log/audit/audit.log` from source address `10.1.1.54` at `2025-05-12 11:30`, followed by successful execution of `rm /var/log/auth.log` at `2025-05-12 11:31`. The commands were executed from `/home/william` and both events completed successfully. The activity is suspicious because audit and authentication logs are security-relevant, and modification or deletion can reduce forensic visibility. No direct compromise was confirmed from the provided logs alone because the activity was performed by a Linux Admin account. SOC recommended validating the activity with William Malhotra and the Linux Team, confirming an approved change or maintenance record, restoring deleted logs if required, checking authentication activity before/after deletion, and escalating if the activity was not approved. Ticket closed as **Suspicious Log Modification / Deletion Activity — Linux Team Validation Required / Security Log Files Modified and Deleted Successfully**.
 
 ## Skills Demonstrated
 
 Linux log analysis, Splunk investigation, log tampering detection, audit log review, authentication log deletion analysis, defense evasion triage, source host validation, administrative activity validation, IOC extraction, MITRE ATT&CK mapping, containment planning, escalation criteria definition, and SOC ticket documentation.
+
+---
+
+## ⚠️ Disclaimer
+
+This repository is created for educational, portfolio, and career development purposes only.
+
+All scenarios are sanitized and written in a safe format. No confidential company information, client data, or real production logs are included.
+
+---
+
+## 👤 Author
+
+**Ananda Das**
+Cybersecurity Student | SOC Analyst Learner | SIEM, Threat Detection & Incident Response Enthusiast
+
+GitHub: [@nothingnhm](https://github.com/nothingnhm)
+
+---
+
+## ⭐ Repository Purpose
+
+This project is part of my cybersecurity portfolio to demonstrate practical experience in ticket triage, IT troubleshooting, SOC alert analysis, and professional documentation.
