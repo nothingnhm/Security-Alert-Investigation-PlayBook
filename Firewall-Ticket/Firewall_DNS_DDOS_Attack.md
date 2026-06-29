@@ -187,7 +187,7 @@ Current SOC L1 decision: **Monitor the activity and escalate only if recurrence,
 
 ## 11. Final Analyst Note
 
-SOC investigated firewall alert **CS-0188 — DNS DDOS Attack**. Logs show inbound UDP traffic from external source IP **104.168.46.10** to internal destination IP **10.0.2.26** on destination port **53/DNS**. The source IP is associated with **HostPapa**, categorized as **Data Center/Web Hosting/Transit**, located in the **United States**.
+SOC investigated firewall alert **CS-01 — DNS DDOS Attack**. Logs show inbound UDP traffic from external source IP **104.168.46.10** to internal destination IP **10.0.2.26** on destination port **53/DNS**. The source IP is associated with **HostPapa**, categorized as **Data Center/Web Hosting/Transit**, located in the **United States**.
 
 Splunk review confirmed **269 events** matching the DNS DDoS threat signature. All observed events were **blocked** by the firewall. No evidence from the provided logs indicates successful traffic delivery, internal host compromise, or service impact.
 
