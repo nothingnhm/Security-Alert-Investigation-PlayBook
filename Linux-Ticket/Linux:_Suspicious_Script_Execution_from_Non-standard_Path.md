@@ -4,7 +4,7 @@
 
 | Field             | Details                                                                                                           |
 | ----------------- | ----------------------------------------------------------------------------------------------------------------- |
-| Ticket ID         | CS-0351                                                                                                           |
+| Ticket ID         | CS-084                                                                                                            |
 | Alert Name        | Linux:- Suspicious Script Execution from Non-standard Path                                                        |
 | Incident Category | Linux / Suspicious Script Execution                                                                               |
 | Ticket Status     | Closed                                                                                                            |
@@ -357,8 +357,31 @@ Escalation to **SOC L2 / Linux Team / Incident Response** would be required if:
 
 ## Final Ticket Closure Comment
 
-SOC investigated ticket **CS-0351 — Suspicious Script Execution from Non-standard Path** on host `LinHRWebServer03 / 10.0.14.12`. Splunk Linux logs confirmed successful execution of `/tmp/.patch/runme.sh` from `/tmp` and `/dev/shm/scan.py` from `/dev/shm` by user `Arun Jain`, identified as a Linux Admin, from source address `10.1.0.12`. These paths are suspicious because temporary and memory-backed directories are commonly used for payload staging or attacker tooling. However, no unauthorized access, privilege escalation, account creation, sensitive file tampering, persistence, data exfiltration, or additional malicious activity was observed in the provided logs. SOC recommended validating the activity with Arun Jain or the Linux Team, reviewing script contents, confirming approved maintenance or scanning purpose, and removing temporary scripts if no longer required. Ticket closed as **Suspicious Script Execution Reviewed — No Confirmed Malicious Activity Observed / User Validation Recommended**.
+SOC investigated ticket **CS-084 — Suspicious Script Execution from Non-standard Path** on host `LinHRWebServer03 / 10.0.14.12`. Splunk Linux logs confirmed successful execution of `/tmp/.patch/runme.sh` from `/tmp` and `/dev/shm/scan.py` from `/dev/shm` by user `Arun Jain`, identified as a Linux Admin, from source address `10.1.0.12`. These paths are suspicious because temporary and memory-backed directories are commonly used for payload staging or attacker tooling. However, no unauthorized access, privilege escalation, account creation, sensitive file tampering, persistence, data exfiltration, or additional malicious activity was observed in the provided logs. SOC recommended validating the activity with Arun Jain or the Linux Team, reviewing script contents, confirming approved maintenance or scanning purpose, and removing temporary scripts if no longer required. Ticket closed as **Suspicious Script Execution Reviewed — No Confirmed Malicious Activity Observed / User Validation Recommended**.
 
 ## Skills Demonstrated
 
 Linux log analysis, Splunk investigation, suspicious script execution triage, non-standard path review, `/tmp` and `/dev/shm` execution analysis, command-line review, source host validation, user role validation, IOC extraction, MITRE ATT&CK mapping, false-positive risk assessment, follow-up query creation, escalation criteria definition, and SOC ticket documentation.
+
+---
+
+## ⚠️ Disclaimer
+
+This repository is created for educational, portfolio, and career development purposes only.
+
+All scenarios are sanitized and written in a safe format. No confidential company information, client data, or real production logs are included.
+
+---
+
+## 👤 Author
+
+**Ananda Das**
+Cybersecurity Student | SOC Analyst Learner | SIEM, Threat Detection & Incident Response Enthusiast
+
+GitHub: [@nothingnhm](https://github.com/nothingnhm)
+
+---
+
+## ⭐ Repository Purpose
+
+This project is part of my cybersecurity portfolio to demonstrate practical experience in ticket triage, IT troubleshooting, SOC alert analysis, and professional documentation.
