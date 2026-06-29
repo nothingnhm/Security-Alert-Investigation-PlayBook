@@ -4,7 +4,7 @@
 
 | Field             | Details                                                                    |
 | ----------------- | -------------------------------------------------------------------------- |
-| Ticket ID         | CS-0407                                                                    |
+| Ticket ID         | CS-060                                                                    |
 | Alert Name        | System Fault – Device Not Sending Logs to Splunk                           |
 | Incident Category | System Fault / Log Forwarding Interruption                                 |
 | Ticket Status     | Closed                                                                     |
@@ -329,8 +329,31 @@ Escalate further only if:
 
 ## Final Ticket Closure Comment
 
-SOC investigated ticket **CS-0407 — System Fault: Device Not Sending Logs to Splunk** after automated monitoring detected that **ZsProxy01** had not sent logs to Splunk for more than 60 minutes. The affected device was identified as a high-severity proxy security device with IP **10.0.2.14**, using Splunk index `main`, and owned by the **Security Engineering Team**. SOC validated the alert using `index=main host=ZsProxy01` and confirmed no new logs after the reported last log timestamp **22-Sep-2025 20:35**. Splunk indexers, ingestion services, and port **9993** were verified as operational. Other proxy/security devices continued forwarding logs successfully, confirming that the issue was isolated to ZsProxy01. The case was escalated to Security Engineering for proxy-side logging/syslog validation. Security Engineering restarted the proxy log forwarding service and verified the forwarding configuration. SOC revalidated Splunk ingestion and confirmed that logs resumed successfully. Ticket closed as **Resolved — Temporary Proxy Log Forwarding Service Interruption**, with no evidence of Splunk infrastructure failure, network-wide outage, malicious activity, or confirmed permanent data loss.
+SOC investigated ticket **CS-060 — System Fault: Device Not Sending Logs to Splunk** after automated monitoring detected that **ZsProxy01** had not sent logs to Splunk for more than 60 minutes. The affected device was identified as a high-severity proxy security device with IP **10.0.2.14**, using Splunk index `main`, and owned by the **Security Engineering Team**. SOC validated the alert using `index=main host=ZsProxy01` and confirmed no new logs after the reported last log timestamp **22-Sep-2025 20:35**. Splunk indexers, ingestion services, and port **9993** were verified as operational. Other proxy/security devices continued forwarding logs successfully, confirming that the issue was isolated to ZsProxy01. The case was escalated to Security Engineering for proxy-side logging/syslog validation. Security Engineering restarted the proxy log forwarding service and verified the forwarding configuration. SOC revalidated Splunk ingestion and confirmed that logs resumed successfully. Ticket closed as **Resolved — Temporary Proxy Log Forwarding Service Interruption**, with no evidence of Splunk infrastructure failure, network-wide outage, malicious activity, or confirmed permanent data loss.
 
 ## Skills Demonstrated
 
 System fault triage, Splunk log validation, proxy log monitoring, security device log forwarding investigation, SIEM health validation, log gap analysis, infrastructure issue scoping, Security Engineering escalation, post-remediation verification, root cause analysis, impact assessment, evidence limitation handling, closure documentation, and SOC operational monitoring.
+
+---
+
+## ⚠️ Disclaimer
+
+This repository is created for educational, portfolio, and career development purposes only.
+
+All scenarios are sanitized and written in a safe format. No confidential company information, client data, or real production logs are included.
+
+---
+
+## 👤 Author
+
+**Ananda Das**
+Cybersecurity Student | SOC Analyst Learner | SIEM, Threat Detection & Incident Response Enthusiast
+
+GitHub: [@nothingnhm](https://github.com/nothingnhm)
+
+---
+
+## ⭐ Repository Purpose
+
+This project is part of my cybersecurity portfolio to demonstrate practical experience in ticket triage, IT troubleshooting, SOC alert analysis, and professional documentation.
