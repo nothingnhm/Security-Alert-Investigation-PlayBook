@@ -4,7 +4,7 @@
 
 | Field                | Details                                                                                               |
 | -------------------- | ----------------------------------------------------------------------------------------------------- |
-| Ticket ID            | CS-0239                                                                                               |
+| Ticket ID            | CS-053                                                                                               |
 | Alert Name           | Phishing Email                                                                                        |
 | Category             | Suspicious Email / Malicious Attachment                                                               |
 | Ticket Status        | Closed                                                                                                |
@@ -317,8 +317,31 @@ Escalate to **SOC L2 / Incident Response** if any of the following are identifie
 
 ## Final Ticket Closure Comment
 
-SOC investigated ticket **CS-0239 — Phishing Email** reported by **Arun Gupta**. The email was sent from `RamirezJ@cityoflakeforest.com` with the subject **City of Lake Forest 2025-02-12 - Sign order# 09098897-GP - PI - INVo. 24ST CV33846 - AIR130259**. Email gateway logs confirmed delivery to `arun.gupta@abc.com`, `inaaya.ramachandran@abc.com`, and `shalv.keer@abc.com`. The attachment was `The City of Lake Forest.xlsx` with SHA1 hash `2a3a695210d13068a765f03bcd2ae8e3d43006eb`. Reputation analysis confirmed the attachment as malicious, with **24/64 security vendors** flagging it as a Trojan / phishing payload. EDR investigation found no attachment execution, suspicious process creation, persistence, malware-related endpoint activity, or endpoint compromise. IPS review identified a historical detection for a similar phishing payload, but no active exploitation or related malicious communication was observed. Ticket closed as **True Positive — Malicious Excel Attachment Delivered / No Execution Observed**, with email quarantine, sender/IP/hash blocking, EDR hash blocklisting, user notification, IOC hunting, and continued monitoring recommended.
+SOC investigated ticket **CS-053 — Phishing Email** reported by **Arun Gupta**. The email was sent from `RamirezJ@cityoflakeforest.com` with the subject **City of Lake Forest 2025-02-12 - Sign order# 09098897-GP - PI - INVo. 24ST CV33846 - AIR130259**. Email gateway logs confirmed delivery to `arun.gupta@abc.com`, `inaaya.ramachandran@abc.com`, and `shalv.keer@abc.com`. The attachment was `The City of Lake Forest.xlsx` with SHA1 hash `2a3a695210d13068a765f03bcd2ae8e3d43006eb`. Reputation analysis confirmed the attachment as malicious, with **24/64 security vendors** flagging it as a Trojan / phishing payload. EDR investigation found no attachment execution, suspicious process creation, persistence, malware-related endpoint activity, or endpoint compromise. IPS review identified a historical detection for a similar phishing payload, but no active exploitation or related malicious communication was observed. Ticket closed as **True Positive — Malicious Excel Attachment Delivered / No Execution Observed**, with email quarantine, sender/IP/hash blocking, EDR hash blocklisting, user notification, IOC hunting, and continued monitoring recommended.
 
 ## Skills Demonstrated
 
 User-reported phishing triage, malicious attachment investigation, Excel malware risk analysis, email gateway log review, file hash reputation analysis, EDR validation, IPS event review, IOC extraction, MITRE ATT&CK mapping, impact validation, containment planning, user validation planning, escalation decision-making, and SOC ticket documentation.
+
+---
+
+## ⚠️ Disclaimer
+
+This repository is created for educational, portfolio, and career development purposes only.
+
+All scenarios are sanitized and written in a safe format. No confidential company information, client data, or real production logs are included.
+
+---
+
+## 👤 Author
+
+**Ananda Das**
+Cybersecurity Student | SOC Analyst Learner | SIEM, Threat Detection & Incident Response Enthusiast
+
+GitHub: [@nothingnhm](https://github.com/nothingnhm)
+
+---
+
+## ⭐ Repository Purpose
+
+This project is part of my cybersecurity portfolio to demonstrate practical experience in ticket triage, IT troubleshooting, SOC alert analysis, and professional documentation.
