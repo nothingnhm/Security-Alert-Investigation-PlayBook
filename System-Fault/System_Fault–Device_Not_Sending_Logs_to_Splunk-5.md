@@ -4,7 +4,7 @@
 
 | Field             | Details                                                                                  |
 | ----------------- | ---------------------------------------------------------------------------------------- |
-| Ticket ID         | CS-0404                                                                                  |
+| Ticket ID         | CS-063                                                                                   |
 | Alert Name        | System Fault – Device Not Sending Logs to Splunk                                         |
 | Incident Category | System Fault / Log Forwarding Interruption                                               |
 | Ticket Status     | Closed                                                                                   |
@@ -333,8 +333,31 @@ Escalate further only if:
 
 ## Final Ticket Closure Comment
 
-SOC investigated ticket **CS-0404 — System Fault: Device Not Sending Logs to Splunk** after automated monitoring detected that **LinFDBK02** had not sent logs to Splunk for more than 60 minutes. The affected device was identified as a medium-severity Linux Backup Server with IP **10.0.11.13**, using Splunk index `main`, and owned by the **Linux Team**. SOC validated the alert using `index=main hostname=LinFDBK02` and confirmed missing logs within the expected monitoring window after the reported last log timestamp **9/16/2025 11:23**. Splunk server health was verified, listener port **9993** was up and reachable, no ingestion errors or queue issues were observed, and other devices continued forwarding logs successfully. The issue was confirmed as isolated to LinFDBK02 and escalated to the Linux Team for endpoint-side Splunk Universal Forwarder validation. The Linux Team restarted the Splunk Universal Forwarder service. SOC rechecked Splunk and confirmed that logs resumed successfully with new real-time events observed. Ticket closed as **Resolved — Splunk Universal Forwarder Service Stopped Unexpectedly**, with no evidence of Splunk infrastructure failure, network-wide outage, malicious activity, or confirmed permanent data loss.
+SOC investigated ticket **CS-063 — System Fault: Device Not Sending Logs to Splunk** after automated monitoring detected that **LinFDBK02** had not sent logs to Splunk for more than 60 minutes. The affected device was identified as a medium-severity Linux Backup Server with IP **10.0.11.13**, using Splunk index `main`, and owned by the **Linux Team**. SOC validated the alert using `index=main hostname=LinFDBK02` and confirmed missing logs within the expected monitoring window after the reported last log timestamp **9/16/2025 11:23**. Splunk server health was verified, listener port **9993** was up and reachable, no ingestion errors or queue issues were observed, and other devices continued forwarding logs successfully. The issue was confirmed as isolated to LinFDBK02 and escalated to the Linux Team for endpoint-side Splunk Universal Forwarder validation. The Linux Team restarted the Splunk Universal Forwarder service. SOC rechecked Splunk and confirmed that logs resumed successfully with new real-time events observed. Ticket closed as **Resolved — Splunk Universal Forwarder Service Stopped Unexpectedly**, with no evidence of Splunk infrastructure failure, network-wide outage, malicious activity, or confirmed permanent data loss.
 
 ## Skills Demonstrated
 
 System fault triage, Splunk log validation, Linux Server log monitoring, backup server log forwarding investigation, Splunk Universal Forwarder troubleshooting, SIEM health validation, log gap analysis, endpoint issue scoping, Linux Team escalation, post-remediation verification, root cause analysis, impact assessment, evidence limitation handling, closure documentation, and SOC operational monitoring.
+
+---
+
+## ⚠️ Disclaimer
+
+This repository is created for educational, portfolio, and career development purposes only.
+
+All scenarios are sanitized and written in a safe format. No confidential company information, client data, or real production logs are included.
+
+---
+
+## 👤 Author
+
+**Ananda Das**
+Cybersecurity Student | SOC Analyst Learner | SIEM, Threat Detection & Incident Response Enthusiast
+
+GitHub: [@nothingnhm](https://github.com/nothingnhm)
+
+---
+
+## ⭐ Repository Purpose
+
+This project is part of my cybersecurity portfolio to demonstrate practical experience in ticket triage, IT troubleshooting, SOC alert analysis, and professional documentation.
