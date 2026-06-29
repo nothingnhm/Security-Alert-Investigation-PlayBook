@@ -4,7 +4,7 @@
 
 | Field             | Details                                                                                               |
 | ----------------- | ----------------------------------------------------------------------------------------------------- |
-| Ticket ID         | CS-0271                                                                                               |
+| Ticket ID         | CS-072                                                                                               |
 | Alert Name        | VPN:- VPN Login from Blacklisted Country                                                              |
 | Incident Category | VPN / Suspicious Authentication                                                                       |
 | Ticket Status     | Closed                                                                                                |
@@ -309,8 +309,31 @@ Escalate to **SOC L2 / Identity Team / Endpoint Security** if any of the followi
 
 ## Final Ticket Closure Comment
 
-SOC investigated ticket **CS-0271 — VPN Login from Blacklisted Country** for user `sneha.khanna`. VPN logs showed repeated password authentication initiation from source IP `185.7.214.37` toward destination `10.0.2.12` on VPN device `IvantiVPN01` under realm `Corporate_VPN`. The alert triggered because the login originated from a blacklisted/high-risk region. Source IP `185.7.214.37` had **100% abuse confidence** and was associated with data center / web hosting / transit infrastructure. Splunk evidence confirmed repeated authentication initiation, MFA OTP challenge generation, and MFA failures due to incorrect OTP entries. No successful VPN session, MFA bypass, endpoint compromise, lateral movement, or data exfiltration was observed. Source IP blocking, user credential reset, user validation, and continued monitoring were completed/recommended. Ticket closed as **True Positive — Suspicious VPN Login from Blacklisted Country / MFA Prevented Unauthorized Access / No Confirmed Compromise**.
+SOC investigated ticket **CS-072 — VPN Login from Blacklisted Country** for user `sneha.khanna`. VPN logs showed repeated password authentication initiation from source IP `185.7.214.37` toward destination `10.0.2.12` on VPN device `IvantiVPN01` under realm `Corporate_VPN`. The alert triggered because the login originated from a blacklisted/high-risk region. Source IP `185.7.214.37` had **100% abuse confidence** and was associated with data center / web hosting / transit infrastructure. Splunk evidence confirmed repeated authentication initiation, MFA OTP challenge generation, and MFA failures due to incorrect OTP entries. No successful VPN session, MFA bypass, endpoint compromise, lateral movement, or data exfiltration was observed. Source IP blocking, user credential reset, user validation, and continued monitoring were completed/recommended. Ticket closed as **True Positive — Suspicious VPN Login from Blacklisted Country / MFA Prevented Unauthorized Access / No Confirmed Compromise**.
 
 ## Skills Demonstrated
 
 VPN log analysis, Splunk investigation, blacklisted country login triage, bad-reputation IP review, suspicious authentication investigation, MFA failure analysis, IOC extraction, identity risk validation, MITRE ATT&CK mapping, containment recommendation, user validation, escalation decision-making, and SOC ticket documentation.
+
+---
+
+## ⚠️ Disclaimer
+
+This repository is created for educational, portfolio, and career development purposes only.
+
+All scenarios are sanitized and written in a safe format. No confidential company information, client data, or real production logs are included.
+
+---
+
+## 👤 Author
+
+**Ananda Das**
+Cybersecurity Student | SOC Analyst Learner | SIEM, Threat Detection & Incident Response Enthusiast
+
+GitHub: [@nothingnhm](https://github.com/nothingnhm)
+
+---
+
+## ⭐ Repository Purpose
+
+This project is part of my cybersecurity portfolio to demonstrate practical experience in ticket triage, IT troubleshooting, SOC alert analysis, and professional documentation.
