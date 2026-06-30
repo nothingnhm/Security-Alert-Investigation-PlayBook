@@ -27,7 +27,7 @@ User **Ryan Thomas** reported a suspicious phishing email for analysis. The emai
 
 The actual sender was:
 
-`katie.richman@hbgusa.com`
+`robart.brown@hdjusa.com`
 
 The subject was:
 
@@ -68,7 +68,7 @@ Based on the failed authentication, QuickBooks impersonation, malicious HTML att
 | ------------------- | ---------------------------------------------------------------- |
 | Detection Time      | 2025-02-13                                                       |
 | Sender Display Name | `ePayment EFT@quickbooks.com`                                    |
-| Actual Sender       | `katie.richman@hbgusa.com`                                       |
+| Actual Sender       | `robart.brown@hdjusa.com`                                       |
 | Sender Domain       | hbgusa.com                                                       |
 | Sender IP           | 207.54.92.90                                                     |
 | Sender Hostname     | esa9.intuit.iphmx.com                                            |
@@ -106,14 +106,14 @@ Based on the failed authentication, QuickBooks impersonation, malicious HTML att
 
 ### Source Analysis
 
-The sender infrastructure appears to belong to a legitimate relay service associated with email delivery systems. However, the actual sender was `katie.richman@hbgusa.com`, while the display name impersonated QuickBooks. SPF, DKIM, and DMARC all failed, which strongly supports the phishing assessment.
+The sender infrastructure appears to belong to a legitimate relay service associated with email delivery systems. However, the actual sender was `robart.brown@hdjusa.com`, while the display name impersonated QuickBooks. SPF, DKIM, and DMARC all failed, which strongly supports the phishing assessment.
 
 ### IOCs Identified
 
 | IOC Type               | Indicator                                                        |
 | ---------------------- | ---------------------------------------------------------------- |
 | Sender Display Name    | `ePayment EFT@quickbooks.com`                                    |
-| Sender Email           | `katie.richman@hbgusa.com`                                       |
+| Sender Email           | `robart.brown@hdjusa.com`                                       |
 | Sender Domain          | hbgusa.com                                                       |
 | Sender IP              | 207.54.92.90                                                     |
 | Sender Hostname        | esa9.intuit.iphmx.com                                            |
@@ -145,7 +145,7 @@ Key suspicious indicators:
 | Indicator             | Observation                 |
 | --------------------- | --------------------------- |
 | Brand Impersonation   | QuickBooks / ePayment       |
-| Actual Sender         | `katie.richman@hbgusa.com`  |
+| Actual Sender         | `robart.brown@hdjusa.com`  |
 | Authentication        | SPF, DKIM, and DMARC failed |
 | Attachment Type       | HTML attachment             |
 | Attachment Reputation | Malicious                   |
@@ -347,7 +347,7 @@ Current impact: **Malicious attachment delivery confirmed. No user interaction o
 ## Recommended Actions
 
 1. Quarantine or remove the delivered emails from `diya.bahri@abc.com` and `ryan.thomas@abc.com`.
-2. Block sender email `katie.richman@hbgusa.com` in the email gateway.
+2. Block sender email `robart.brown@hdjusa.com` in the email gateway.
 3. Block sender domain `hbgusa.com`.
 4. Block sender IP `207.54.92.90` if policy allows.
 5. Add hash `74bc436a1442e54f352c3bed2e50f53170f0e14f` to EDR blocklists.
@@ -402,7 +402,7 @@ Escalate to **SOC L2 / Incident Response** if any of the following are identifie
 
 ## Final Ticket Closure Comment
 
-SOC investigated ticket **CS-055 — Phishing Email Reported** reported by **Ryan Thomas**. The email impersonated QuickBooks/ePayment branding using the display name `ePayment EFT@quickbooks.com`, while the actual sender was `katie.richman@hbgusa.com`. The subject was **Remittance advice 32493682b1baea9eaf8f52a84870de14**. Email authentication checks failed for SPF, DKIM, and DMARC. Email gateway logs confirmed delivery to `diya.bahri@abc.com` and `ryan.thomas@abc.com`. The malicious HTML attachment was `ELECTRONIC RECEIPT_Slgreen.html` with hash `74bc436a1442e54f352c3bed2e50f53170f0e14f`, detected by **17/61 security vendors** as phishing or credential theft-related content. IPS logs showed a related historical signature `SMTP: Malicious Attachment with Phishing Payload`. Proxy logs showed no activity, and EDR review found no attachment execution, suspicious process creation, persistence, malware activity, endpoint compromise, or credential theft. Ticket closed as **True Positive — Malicious Phishing Attachment Delivered / No User Impact Observed**, with email quarantine, IOC blocking, EDR hash blocklisting, user notification, and continued monitoring recommended.
+SOC investigated ticket **CS-055 — Phishing Email Reported** reported by **Ryan Thomas**. The email impersonated QuickBooks/ePayment branding using the display name `ePayment EFT@quickbooks.com`, while the actual sender was `robart.brown@hdjusa.com`. The subject was **Remittance advice 32493682b1baea9eaf8f52a84870de14**. Email authentication checks failed for SPF, DKIM, and DMARC. Email gateway logs confirmed delivery to `diya.bahri@abc.com` and `ryan.thomas@abc.com`. The malicious HTML attachment was `ELECTRONIC RECEIPT_Slgreen.html` with hash `74bc436a1442e54f352c3bed2e50f53170f0e14f`, detected by **17/61 security vendors** as phishing or credential theft-related content. IPS logs showed a related historical signature `SMTP: Malicious Attachment with Phishing Payload`. Proxy logs showed no activity, and EDR review found no attachment execution, suspicious process creation, persistence, malware activity, endpoint compromise, or credential theft. Ticket closed as **True Positive — Malicious Phishing Attachment Delivered / No User Impact Observed**, with email quarantine, IOC blocking, EDR hash blocklisting, user notification, and continued monitoring recommended.
 
 ---
 
