@@ -20,7 +20,7 @@ An email gateway alert was triggered for an email sent from a suspicious newly r
 
 The email was sent from:
 
-`"Paylogin" <Paylogin@bestoacmoaltou.net>`
+`"Paylogin" <Payloginehfih@bestoavdnk.net>`
 
 The message was delivered to:
 
@@ -44,7 +44,7 @@ The URL was categorized as a **Security Risk** and was flagged as **Phishing/Mal
 | ------------------- | --------------------------------------------- |
 | Timestamp           | 2024-04-06 19:06:55+00:00                     |
 | Sender Display Name | Paylogin                                      |
-| Sender Email        | `Paylogin@bestoacmoaltou.net`                 |
+| Sender Email        | `Payloginehfih@bestoavdnk.net`                 |
 | Sender Domain       | bestoacmoaltou.net                            |
 | Recipient           | `rohit.shah@abc.com`                          |
 | Email Subject       | Finance Login Payment                         |
@@ -62,7 +62,7 @@ The URL was categorized as a **Security Risk** and was flagged as **Phishing/Mal
 | ------------------------------ | ------------------------------------- |
 | Affected User                  | Rohit Shah                            |
 | Recipient Mailbox              | `rohit.shah@abc.com`                  |
-| Sender Email                   | `Paylogin@bestoacmoaltou.net`         |
+| Sender Email                   | `Payloginehfih@bestoavdnk.net`         |
 | Sender Domain                  | bestoacmoaltou.net                    |
 | Sender IP                      | 172.64.146.197                        |
 | Phishing URL                   | `http://bestoacmoaltou.net/login.php` |
@@ -77,7 +77,7 @@ The URL was categorized as a **Security Risk** and was flagged as **Phishing/Mal
 
 | IOC Type       | Indicator                             |
 | -------------- | ------------------------------------- |
-| Sender Email   | `Paylogin@bestoacmoaltou.net`         |
+| Sender Email   | `Payloginehfih@bestoavdnk.net`         |
 | Sender Domain  | bestoacmoaltou.net                    |
 | Sender IP      | 172.64.146.197                        |
 | Recipient      | `rohit.shah@abc.com`                  |
@@ -130,7 +130,7 @@ index=main sourcetype="email_logs" "Finance Login Payment"
 
 ```text id="cs0247_email_results"
 _time	Sender	SenderIP	Recipient	Email_Subject	URL	Status	Action
-2024-04-06 06:55:00	"Paylogin" <Paylogin@bestoacmoaltou.net>	172.64.146.197	rohit.shah@abc.com	Finance Login Payment	bestoacmoaltou.net/login.php	Delivered	allowed
+2024-04-06 06:55:00	"Paylogin" <Payloginehfih@bestoavdnk.net>	172.64.146.197	rohit.shah@abc.com	Finance Login Payment	bestoacmoaltou.net/login.php	Delivered	allowed
 ```
 
 #### 3. Proxy Activity Validation
@@ -229,7 +229,7 @@ Current impact: **User interaction confirmed. Credential compromise is possible 
 5. Review mailbox forwarding rules and inbox rules for suspicious changes.
 6. Quarantine or remove the phishing email from Rohit Shah’s mailbox.
 7. Search all mailboxes for the same sender, subject, URL, sender domain, and sender IP.
-8. Block `Paylogin@bestoacmoaltou.net` in the email gateway.
+8. Block `Payloginehfih@bestoavdnk.net` in the email gateway.
 9. Block or quarantine emails from `bestoacmoaltou.net`.
 10. Block `http://bestoacmoaltou.net/login.php` in proxy/SWG.
 11. Block `bestoacmoaltou.net` in DNS security.
@@ -259,7 +259,7 @@ If Rohit confirms no credentials were entered and authentication logs are clean,
 
 ## Final Ticket Closure Comment
 
-SOC investigated ticket **CS-050 — Email Gateway: Newly Registered Domains in Sender Address**. The email was sent from `"Paylogin" <Paylogin@bestoacmoaltou.net>` to `rohit.shah@abc.com` with the subject **Finance Login Payment**. Email gateway logs confirmed the message was **Delivered** and **allowed** and contained the URL `bestoacmoaltou.net/login.php`. Proxy logs confirmed that **Rohit Shah** accessed the URL using a GET request and later generated a POST request to the same login page. The URL was categorized as a security risk and was flagged as phishing/malicious by multiple vendors. No confirmed credential compromise, MFA approval, endpoint compromise, malware download, or data exfiltration was identified from the provided logs. Ticket closed as **True Positive — Phishing Email with User Interaction and Possible Credential Submission**, with user validation, password reset/session revocation review, mailbox cleanup, IOC blocking, authentication log review, and conditional SOC L2 escalation recommended.
+SOC investigated ticket **CS-050 — Email Gateway: Newly Registered Domains in Sender Address**. The email was sent from `"Paylogin" <Payloginehfih@bestoavdnk.net>` to `rohit.shah@abc.com` with the subject **Finance Login Payment**. Email gateway logs confirmed the message was **Delivered** and **allowed** and contained the URL `bestoacmoaltou.net/login.php`. Proxy logs confirmed that **Rohit Shah** accessed the URL using a GET request and later generated a POST request to the same login page. The URL was categorized as a security risk and was flagged as phishing/malicious by multiple vendors. No confirmed credential compromise, MFA approval, endpoint compromise, malware download, or data exfiltration was identified from the provided logs. Ticket closed as **True Positive — Phishing Email with User Interaction and Possible Credential Submission**, with user validation, password reset/session revocation review, mailbox cleanup, IOC blocking, authentication log review, and conditional SOC L2 escalation recommended.
 
 ## Skills Demonstrated
 
