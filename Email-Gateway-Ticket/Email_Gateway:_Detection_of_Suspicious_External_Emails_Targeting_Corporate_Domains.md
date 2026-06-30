@@ -19,7 +19,7 @@ An email gateway alert was triggered for suspicious external emails targeting co
 
 The primary sender observed was:
 
-`Microsoft Sharepoint <dariana@trangthino.cfd>`
+`Microsoft Sharepoint <codex@thino.cfd>`
 
 The emails were delivered to multiple recipients:
 
@@ -49,7 +49,7 @@ Based on the external sender, SharePoint impersonation, purchase order lure, phi
 | ------------------------ | ----------------------------- |
 | Initial Alert Timestamp  | 2024-04-23 03:25:10-07:00     |
 | Sender Display Name      | Microsoft Sharepoint          |
-| Sender Email             | `dariana@trangthino.cfd`      |
+| Sender Email             | `codex@thino.cfd`      |
 | Sender Domain            | trangthino.cfd                |
 | Initial Recipient        | `info@abc.com`                |
 | Email Subject            | Purchase Order Ref :64167     |
@@ -80,7 +80,7 @@ Based on the external sender, SharePoint impersonation, purchase order lure, phi
 | IOC Type                  | Indicator                                                                                             |
 | ------------------------- | ----------------------------------------------------------------------------------------------------- |
 | Sender Display Name       | Microsoft Sharepoint                                                                                  |
-| Sender Email              | `dariana@trangthino.cfd`                                                                              |
+| Sender Email              | `codex@thino.cfd`                                                                              |
 | Sender Domain             | trangthino.cfd                                                                                        |
 | Sender IP                 | 193.239.86.150                                                                                        |
 | Related Sender            | `Noreply@abc.com`                                                                                     |
@@ -152,7 +152,7 @@ Key suspicious indicators:
 
 The sender used the display name **Microsoft Sharepoint**, but the actual sender address was:
 
-`dariana@trangthino.cfd`
+`codex@thino.cfd`
 
 This sender domain does not match Microsoft or the organization. The mismatch between display name and sender domain is a strong phishing indicator.
 
@@ -167,9 +167,9 @@ index=main "Microsoft Sharepoint" sourcetype=email_logs
 
 ```text id="cs0234_email_results"
 _time	Sender	SenderIP	Recipient	Email_Subject	URL	Status	Action
-2024-04-23 07:00:00	Microsoft Sharepoint <dariana@trangthino.cfd>	193.239.86.150	ajay.joshi@abc.com	Purchase Order Ref :64189	https://jjjjjefta.github.io/gined-eurekakhnudbnuhgjNBFtyjhkb-gdhkhnb-cgdhjhknchjyuhjbfgGHGFghjknbv/?dkdld;pdlclllf;frdsxcvmail=ajay.joshi@abc.com&cbvghdjlkjhgfLIuytredvmM%20Cfghjmcxdfghjkmnbvmjolkdfdlkjhgfc	Delivered	allowed
-2024-04-23 07:00:00	Microsoft Sharepoint <dariana@trangthino.cfd>	193.239.86.150	david.patel@abc.com	Purchase Order Ref :64132	https://jjjjjefta.github.io/gined-eurekakhnudbnuhgjNBFtyjhkb-gdhkhnb-cgdhjhknchjyuhjbfgGHGFghjknbv/?dkdld;pdlclllf;frdsxcvmail=david.patel@abc.com&cbvghdjlkjhgfLIuytredvmM%20Cfghjmcxdfghjkmnbvmjolkdfdlkjhgfc	Delivered	allowed
-2024-04-23 07:00:00	Microsoft Sharepoint <dariana@trangthino.cfd>	193.239.86.150	info@abc.com	Purchase Order Ref :64167	https://jjjjjefta.github.io/gined-eurekakhnudbnuhgjNBFtyjhkb-gdhkhnb-cgdhjhknchjyuhjbfgGHGFghjknbv/?dkdld;pdlclllf;frdsxcvmail=info@abc.com&cbvghdjlkjhgfLIuytredvmM%20Cfghjmcxdfghjkmnbvmjolkdfdlkjhgfc	Delivered	allowed
+2024-04-23 07:00:00	Microsoft Sharepoint <codex@thino.cfd>	193.239.86.150	ajay.joshi@abc.com	Purchase Order Ref :64189	https://jjjjjefta.github.io/gined-eurekakhnudbnuhgjNBFtyjhkb-gdhkhnb-cgdhjhknchjyuhjbfgGHGFghjknbv/?dkdld;pdlclllf;frdsxcvmail=ajay.joshi@abc.com&cbvghdjlkjhgfLIuytredvmM%20Cfghjmcxdfghjkmnbvmjolkdfdlkjhgfc	Delivered	allowed
+2024-04-23 07:00:00	Microsoft Sharepoint <codex@thino.cfd>	193.239.86.150	david.patel@abc.com	Purchase Order Ref :64132	https://jjjjjefta.github.io/gined-eurekakhnudbnuhgjNBFtyjhkb-gdhkhnb-cgdhjhknchjyuhjbfgGHGFghjknbv/?dkdld;pdlclllf;frdsxcvmail=david.patel@abc.com&cbvghdjlkjhgfLIuytredvmM%20Cfghjmcxdfghjkmnbvmjolkdfdlkjhgfc	Delivered	allowed
+2024-04-23 07:00:00	Microsoft Sharepoint <codex@thino.cfd>	193.239.86.150	info@abc.com	Purchase Order Ref :64167	https://jjjjjefta.github.io/gined-eurekakhnudbnuhgjNBFtyjhkb-gdhkhnb-cgdhjhknchjyuhjbfgGHGFghjknbv/?dkdld;pdlclllf;frdsxcvmail=info@abc.com&cbvghdjlkjhgfLIuytredvmM%20Cfghjmcxdfghjkmnbvmjolkdfdlkjhgfc	Delivered	allowed
 2024-04-03 13:14:00	Noreply@abc.com	52.101.194.10	info@abc.com	Microsoft Sharepoint	https://bird-rattle-sundial.glitch.me/?amnx=info@abc.com"><FONT	Delivered	allowed
 ```
 
@@ -274,7 +274,7 @@ Current impact: **User interaction confirmed for David Patel. Credential submiss
 6. Contact **Ajay Joshi** and the owner of `info@abc.com` to confirm whether the phishing URL was clicked.
 7. Quarantine/remove delivered emails from all affected mailboxes.
 8. Search all mailboxes for the same sender, subject pattern, URLs, sender IP, and sender domain.
-9. Block `dariana@trangthino.cfd` in the email gateway.
+9. Block `codex@thino.cfd` in the email gateway.
 10. Block or quarantine emails from `trangthino.cfd`.
 11. Block `jjjjjefta.github.io` in proxy/SWG and DNS security.
 12. Block `bird-rattle-sundial.glitch.me` in proxy/SWG and DNS security.
@@ -305,7 +305,7 @@ If David confirms no credentials were entered and authentication logs are clean,
 
 ## Final Ticket Closure Comment
 
-SOC investigated ticket **CS-051 — Email Gateway: Detection of Suspicious External Emails Targeting Corporate Domains**. The campaign used a Microsoft SharePoint and purchase order theme and was sent from `Microsoft Sharepoint <dariana@trangthino.cfd>`. Email gateway logs confirmed delivery to `ajay.joshi@abc.com`, `david.patel@abc.com`, and `info@abc.com`. The emails contained phishing URLs hosted on `jjjjjefta.github.io`. A related earlier SharePoint-themed suspicious email used `bird-rattle-sundial.glitch.me`. Proxy logs confirmed that **David Patel** accessed `jjjjjefta.github.io` and performed both GET and POST requests with HTTP response code 200. The POST request creates a possible credential submission risk. No successful account compromise, MFA approval, endpoint compromise, malware download, or data exfiltration was confirmed from the provided logs. Ticket closed as **True Positive — SharePoint-Themed Phishing Email with User Interaction and Possible Credential Submission**, with email quarantine, IOC blocking, David Patel user validation, password/session review, authentication log review, and conditional SOC L2/Identity Team escalation recommended if credential submission or suspicious login activity is confirmed.
+SOC investigated ticket **CS-051 — Email Gateway: Detection of Suspicious External Emails Targeting Corporate Domains**. The campaign used a Microsoft SharePoint and purchase order theme and was sent from `Microsoft Sharepoint <codex@thino.cfd>`. Email gateway logs confirmed delivery to `ajay.joshi@abc.com`, `david.patel@abc.com`, and `info@abc.com`. The emails contained phishing URLs hosted on `jjjjjefta.github.io`. A related earlier SharePoint-themed suspicious email used `bird-rattle-sundial.glitch.me`. Proxy logs confirmed that **David Patel** accessed `jjjjjefta.github.io` and performed both GET and POST requests with HTTP response code 200. The POST request creates a possible credential submission risk. No successful account compromise, MFA approval, endpoint compromise, malware download, or data exfiltration was confirmed from the provided logs. Ticket closed as **True Positive — SharePoint-Themed Phishing Email with User Interaction and Possible Credential Submission**, with email quarantine, IOC blocking, David Patel user validation, password/session review, authentication log review, and conditional SOC L2/Identity Team escalation recommended if credential submission or suspicious login activity is confirmed.
 
 ## Skills Demonstrated
 
