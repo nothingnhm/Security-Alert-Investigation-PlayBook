@@ -19,7 +19,7 @@ An email gateway alert was triggered for a mass mailing/spam campaign targeting 
 
 The initial alert involved an email sent from:
 
-`gloria.pacheco@hairbraidingwarnerrobins.com`
+`gloria.pheco@hairbrasdnkfnsdnk.com`
 
 to:
 
@@ -58,7 +58,7 @@ Based on the delivered phishing email, multiple user clicks, POST requests, mali
 | Field                     | Value                                                 |
 | ------------------------- | ----------------------------------------------------- |
 | Initial Alert Timestamp   | 3/9/2025 13:36                                        |
-| Primary Sender            | `gloria.pacheco@hairbraidingwarnerrobins.com`         |
+| Primary Sender            | `gloria.pheco@hairbrasdnkfnsdnk.com`         |
 | Related Sender            | `sean.morgan@hairbraidingwarnerrobins.com`            |
 | Sender Domain             | hairbraidingwarnerrobins.com                          |
 | Initial Recipient         | `anjali.chauhan@abc.com`                              |
@@ -89,7 +89,7 @@ Based on the delivered phishing email, multiple user clicks, POST requests, mali
 
 | IOC Type                 | Indicator                                             |
 | ------------------------ | ----------------------------------------------------- |
-| Sender Email             | `gloria.pacheco@hairbraidingwarnerrobins.com`         |
+| Sender Email             | `gloria.pheco@hairbrasdnkfnsdnk.com`         |
 | Sender Email             | `sean.morgan@hairbraidingwarnerrobins.com`            |
 | Sender Domain            | hairbraidingwarnerrobins.com                          |
 | Recipient                | `anjali.chauhan@abc.com`                              |
@@ -157,14 +157,14 @@ index=main "184.106.54.1" "anjali.chauhan"
 ```text id="cs0233_email_results"
 _time	Sender	SenderIP	Recipient	Email_Subject	URL	Status	Action
 2025-03-09 13:45:00	sean.morgan@hairbraidingwarnerrobins.com	184.106.54.1	anjali.chauhan@abc.com	Action Required: Policy Update	http://ai22.hgva.net	deferred	blocked
-2025-03-09 13:36:00	gloria.pacheco@hairbraidingwarnerrobins.com	184.106.54.1	anjali.chauhan@abc.com	Important: Password Expiration Notice	https://centraltraders.ae/owa-auth.asspx/index.html	delivered	allowed
+2025-03-09 13:36:00	gloria.pheco@hairbrasdnkfnsdnk.com	184.106.54.1	anjali.chauhan@abc.com	Important: Password Expiration Notice	https://centraltraders.ae/owa-auth.asspx/index.html	delivered	allowed
 ```
 
 #### 3. Initial Email Gateway Alert Evidence
 
 | Timestamp      | Sender                                        | Recipient                | Email Subject                         | Sender IP      | Status    | Action | Reason       |
 | -------------- | --------------------------------------------- | ------------------------ | ------------------------------------- | -------------- | --------- | ------ | ------------ |
-| 3/9/2025 13:36 | `gloria.pacheco@hairbraidingwarnerrobins.com` | `anjali.chauhan@abc.com` | Important: Password Expiration Notice | 172.67.202.253 | delivered | allowe | Not Provided |
+| 3/9/2025 13:36 | `gloria.pheco@hairbrasdnkfnsdnk.com` | `anjali.chauhan@abc.com` | Important: Password Expiration Notice | 172.67.202.253 | delivered | allowe | Not Provided |
 
 **Evidence Note:** The initial ticket row shows sender IP **172.67.202.253**, while the Splunk email log shows **184.106.54.1** for related email events. Both were preserved as observed evidence and should be validated during deeper mail-flow review.
 
@@ -290,7 +290,7 @@ Current impact: **High risk. Credential compromise is possible, and Sneha Nair�
 9. Remove/quarantine phishing emails from all mailboxes.
 10. Search for additional recipients of the same sender, subject, sender domain, and URLs.
 11. Block `hairbraidingwarnerrobins.com` in the email gateway if no business requirement exists.
-12. Block `gloria.pacheco@hairbraidingwarnerrobins.com` and `sean.morgan@hairbraidingwarnerrobins.com`.
+12. Block `gloria.pheco@hairbrasdnkfnsdnk.com` and `sean.morgan@hairbraidingwarnerrobins.com`.
 13. Block `centraltraders.ae` and `ai22.hgva.net` in proxy/SWG and DNS security.
 14. Block `185.220.101.40` in VPN, firewall, and IPS controls.
 15. Block `184.106.54.1` and `172.67.202.253` only if policy allows and business impact is reviewed.
@@ -317,7 +317,7 @@ Escalation is required because:
 
 ## Final Ticket Closure Comment
 
-SOC investigated ticket **CS-052 — Email Gateway: Mass Mailing and Spam Detection**. The campaign used password-expiration and policy-update themes to target users. The primary phishing email was sent from `gloria.pacheco@hairbraidingwarnerrobins.com` to `anjali.chauhan@abc.com` with subject **Important: Password Expiration Notice** and included the phishing URL `https://centraltraders.ae/owa-auth.asspx/index.html`. The URL was categorized as a security risk and flagged by **12/92 vendors** as malicious. A related blocked email from `sean.morgan@hairbraidingwarnerrobins.com` contained `http://ai22.hgva.net`. Proxy logs confirmed multiple users accessed the suspicious URL, including GET and POST requests. POST requests were observed for **Anjali Chauhan** and **Sneha Nair**, indicating possible credential submission. VPN logs showed suspicious activity from Tor exit node `185.220.101.40`, including a successful VPN login for **Sneha Nair** and failed attempts for **Anjali Chauhan**. Ticket closed as **True Positive — Phishing/Mass Mailing Campaign with Possible Credential Compromise**, with password resets, session revocation, IOC blocking, mailbox cleanup, SOC L2/Identity escalation, and 2–3 days of monitoring recommended.
+SOC investigated ticket **CS-052 — Email Gateway: Mass Mailing and Spam Detection**. The campaign used password-expiration and policy-update themes to target users. The primary phishing email was sent from `gloria.pheco@hairbrasdnkfnsdnk.com` to `anjali.chauhan@abc.com` with subject **Important: Password Expiration Notice** and included the phishing URL `https://centraltraders.ae/owa-auth.asspx/index.html`. The URL was categorized as a security risk and flagged by **12/92 vendors** as malicious. A related blocked email from `sean.morgan@hairbraidingwarnerrobins.com` contained `http://ai22.hgva.net`. Proxy logs confirmed multiple users accessed the suspicious URL, including GET and POST requests. POST requests were observed for **Anjali Chauhan** and **Sneha Nair**, indicating possible credential submission. VPN logs showed suspicious activity from Tor exit node `185.220.101.40`, including a successful VPN login for **Sneha Nair** and failed attempts for **Anjali Chauhan**. Ticket closed as **True Positive — Phishing/Mass Mailing Campaign with Possible Credential Compromise**, with password resets, session revocation, IOC blocking, mailbox cleanup, SOC L2/Identity escalation, and 2–3 days of monitoring recommended.
 
 ## Skills Demonstrated
 
