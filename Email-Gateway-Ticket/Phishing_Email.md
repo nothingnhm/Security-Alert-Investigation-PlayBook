@@ -21,7 +21,7 @@
 
 User **Arun Gupta** reported a suspicious email containing a malicious Excel attachment. The email used a purchase order / invoice signing theme and appeared to come from:
 
-`Juan Ramirez <RamirezJ@cityoflakeforest.com>`
+`Juan Ramirez <Rami@cityhack.com>`
 
 The subject was:
 
@@ -53,7 +53,7 @@ Based on the delivered malicious attachment and vendor reputation, this case is 
 | -------------------- | ---------------------------------------------------------------------------------------------- |
 | Email Time           | 2025-02-13 05:55:00                                                                            |
 | Sender Name          | Juan Ramirez                                                                                   |
-| Sender Email         | `RamirezJ@cityoflakeforest.com`                                                                |
+| Sender Email         | `Rami@cityhack.com`                                                                |
 | Sender Domain        | cityoflakeforest.com                                                                           |
 | Sender IP            | 52.101.194.18                                                                                  |
 | Subject              | City of Lake Forest 2025-02-12 - Sign order# 09098897-GP - PI - INVo. 24ST CV33846 - AIR130259 |
@@ -85,7 +85,7 @@ Based on the delivered malicious attachment and vendor reputation, this case is 
 | IOC Type             | Indicator                                                                                      |
 | -------------------- | ---------------------------------------------------------------------------------------------- |
 | Sender Name          | Juan Ramirez                                                                                   |
-| Sender Email         | `RamirezJ@cityoflakeforest.com`                                                                |
+| Sender Email         | `Rami@cityhack.com`                                                                |
 | Sender Domain        | cityoflakeforest.com                                                                           |
 | Sender IP            | 52.101.194.18                                                                                  |
 | Recipient            | `arun.gupta@abc.com`                                                                           |
@@ -113,7 +113,7 @@ Key suspicious indicators:
 
 | Indicator             | Observation                           |
 | --------------------- | ------------------------------------- |
-| Sender                | `RamirezJ@cityoflakeforest.com`       |
+| Sender                | `Rami@cityhack.com`       |
 | Subject Theme         | Purchase order / invoice / sign order |
 | Attachment Type       | Excel spreadsheet                     |
 | Attachment Reputation | Malicious                             |
@@ -128,15 +128,15 @@ Key suspicious indicators:
 Email gateway logs confirmed that the same malicious attachment was delivered to three internal users.
 
 ```spl id="cs0239_email_query"
-index=main sourcetype="email_logs" "RamirezJ@cityoflakeforest.com"
+index=main sourcetype="email_logs" "Rami@cityhack.com"
 | table _time Sender SenderIP Recipient Email_Subject Attachment_Name Attachment_Hash Action Status MessageID
 ```
 
 ```text id="cs0239_email_results"
 _time	Sender	SenderIP	Recipient	Email_Subject	Attachment_Name	Attachment_Hash	Action	Status
-2025-02-13 05:55:00	RamirezJ@cityoflakeforest.com	52.101.194.18	shalv.keer@abc.com	City of Lake Forest 2025-02-12 - Sign order# 09098897-GP - PI - INVo. 24ST CV33846 - AIR130259	The City of Lake Forest.xlsx	2a3a695210d13068a765f03bcd2ae8e3d43006eb	Allowed	Delivered
-2025-02-13 05:55:00	RamirezJ@cityoflakeforest.com	52.101.194.18	inaaya.ramachandran@abc.com	City of Lake Forest 2025-02-12 - Sign order# 09098897-GP - PI - INVo. 24ST CV33846 - AIR130259	The City of Lake Forest.xlsx	2a3a695210d13068a765f03bcd2ae8e3d43006eb	Allowed	Delivered
-2025-02-13 05:55:00	RamirezJ@cityoflakeforest.com	52.101.194.18	arun.gupta@abc.com	City of Lake Forest 2025-02-12 - Sign order# 09098897-GP - PI - INVo. 24ST CV33846 - AIR130259	The City of Lake Forest.xlsx	2a3a695210d13068a765f03bcd2ae8e3d43006eb	Allowed	Delivered
+2025-02-13 05:55:00	Rami@cityhack.com	52.101.194.18	shalv.keer@abc.com	City of Lake Forest 2025-02-12 - Sign order# 09098897-GP - PI - INVo. 24ST CV33846 - AIR130259	The City of Lake Forest.xlsx	2a3a695210d13068a765f03bcd2ae8e3d43006eb	Allowed	Delivered
+2025-02-13 05:55:00	Rami@cityhack.com	52.101.194.18	inaaya.ramachandran@abc.com	City of Lake Forest 2025-02-12 - Sign order# 09098897-GP - PI - INVo. 24ST CV33846 - AIR130259	The City of Lake Forest.xlsx	2a3a695210d13068a765f03bcd2ae8e3d43006eb	Allowed	Delivered
+2025-02-13 05:55:00	Rami@cityhack.com	52.101.194.18	arun.gupta@abc.com	City of Lake Forest 2025-02-12 - Sign order# 09098897-GP - PI - INVo. 24ST CV33846 - AIR130259	The City of Lake Forest.xlsx	2a3a695210d13068a765f03bcd2ae8e3d43006eb	Allowed	Delivered
 ```
 
 ### Email Gateway Findings
@@ -274,7 +274,7 @@ Current impact: **Malicious attachment delivery confirmed. No execution or endpo
 ## Recommended Actions
 
 1. Quarantine or remove the delivered email from all affected mailboxes.
-2. Block sender email `RamirezJ@cityoflakeforest.com` in the email gateway.
+2. Block sender email `Rami@cityhack.com` in the email gateway.
 3. Block sender domain `cityoflakeforest.com` if no business requirement exists.
 4. Block sender IP `52.101.194.18` if policy allows.
 5. Add SHA1 hash `2a3a695210d13068a765f03bcd2ae8e3d43006eb` to EDR blocklists.
@@ -290,7 +290,7 @@ Current impact: **Malicious attachment delivery confirmed. No execution or endpo
 
 SOC should contact **Arun Gupta**, **Inaaya Ramachandran**, and **Shalv Keer** and confirm:
 
-1. Did you open the email from `RamirezJ@cityoflakeforest.com`?
+1. Did you open the email from `Rami@cityhack.com`?
 2. Did you download or open `The City of Lake Forest.xlsx`?
 3. Did Excel show any warning or security prompt?
 4. Did you enable macros or click “Enable Content”?
@@ -317,7 +317,7 @@ Escalate to **SOC L2 / Incident Response** if any of the following are identifie
 
 ## Final Ticket Closure Comment
 
-SOC investigated ticket **CS-053 — Phishing Email** reported by **Arun Gupta**. The email was sent from `RamirezJ@cityoflakeforest.com` with the subject **City of Lake Forest 2025-02-12 - Sign order# 09098897-GP - PI - INVo. 24ST CV33846 - AIR130259**. Email gateway logs confirmed delivery to `arun.gupta@abc.com`, `inaaya.ramachandran@abc.com`, and `shalv.keer@abc.com`. The attachment was `The City of Lake Forest.xlsx` with SHA1 hash `2a3a695210d13068a765f03bcd2ae8e3d43006eb`. Reputation analysis confirmed the attachment as malicious, with **24/64 security vendors** flagging it as a Trojan / phishing payload. EDR investigation found no attachment execution, suspicious process creation, persistence, malware-related endpoint activity, or endpoint compromise. IPS review identified a historical detection for a similar phishing payload, but no active exploitation or related malicious communication was observed. Ticket closed as **True Positive — Malicious Excel Attachment Delivered / No Execution Observed**, with email quarantine, sender/IP/hash blocking, EDR hash blocklisting, user notification, IOC hunting, and continued monitoring recommended.
+SOC investigated ticket **CS-053 — Phishing Email** reported by **Arun Gupta**. The email was sent from `Rami@cityhack.com` with the subject **City of Lake Forest 2025-02-12 - Sign order# 09098897-GP - PI - INVo. 24ST CV33846 - AIR130259**. Email gateway logs confirmed delivery to `arun.gupta@abc.com`, `inaaya.ramachandran@abc.com`, and `shalv.keer@abc.com`. The attachment was `The City of Lake Forest.xlsx` with SHA1 hash `2a3a695210d13068a765f03bcd2ae8e3d43006eb`. Reputation analysis confirmed the attachment as malicious, with **24/64 security vendors** flagging it as a Trojan / phishing payload. EDR investigation found no attachment execution, suspicious process creation, persistence, malware-related endpoint activity, or endpoint compromise. IPS review identified a historical detection for a similar phishing payload, but no active exploitation or related malicious communication was observed. Ticket closed as **True Positive — Malicious Excel Attachment Delivered / No Execution Observed**, with email quarantine, sender/IP/hash blocking, EDR hash blocklisting, user notification, IOC hunting, and continued monitoring recommended.
 
 ## Skills Demonstrated
 
