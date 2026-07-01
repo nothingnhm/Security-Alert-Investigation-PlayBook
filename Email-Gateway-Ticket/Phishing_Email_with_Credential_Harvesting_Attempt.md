@@ -23,7 +23,7 @@ A phishing email campaign was reported by **Brian Lee** for analysis. The email 
 
 The phishing email was sent from:
 
-`No Reply Via Xerox Scanner <rebecca@princetonmercer.org>`
+`No Reply Via Xerox Scanner <reb@tonmercer.org>`
 
 The subject was:
 
@@ -49,7 +49,7 @@ Based on the delivered phishing email, multiple user interactions, possible cred
 | ---------------------- | ---------------------------------------------------------------------------- |
 | Detection Time         | 2025-01-29                                                                   |
 | Sender Display Name    | No Reply Via Xerox Scanner                                                   |
-| Sender Email           | `rebecca@princetonmercer.org`                                                |
+| Sender Email           | `reb@tonmercer.org`                                                |
 | Sender IP              | 149.72.32.71                                                                 |
 | Sender Infrastructure  | SendGrid / GrowthZone                                                        |
 | Sender Hostname        | o4.sgsending.growthzoneapp.com                                               |
@@ -101,7 +101,7 @@ The use of legitimate infrastructure does not make the email benign. The final a
 
 | IOC Type               | Indicator                                                                                                  |
 | ---------------------- | ---------------------------------------------------------------------------------------------------------- |
-| Sender Email           | `rebecca@princetonmercer.org`                                                                              |
+| Sender Email           | `reb@tonmercer.org`                                                                              |
 | Sender Display Name    | No Reply Via Xerox Scanner                                                                                 |
 | Sender IP              | 149.72.32.71                                                                                               |
 | Sender Hostname        | o4.sgsending.growthzoneapp.com                                                                             |
@@ -150,7 +150,7 @@ Key suspicious indicators:
 #### 2. Email Gateway Review
 
 ```spl id="cs0242_email_query"
-index=main sourcetype="email_logs" rebecca@princetonmercer.org
+index=main sourcetype="email_logs" reb@tonmercer.org
 | table _time Sender Recipient Email_Subject Action Status MessageID URL Attachment_Hash
 ```
 
@@ -336,7 +336,7 @@ Current impact: **Credential exposure risk is high, but MFA prevented confirmed 
 3. Review VPN, MFA, and authentication logs for all users who clicked the phishing URL.
 4. Block suspicious VPN source IP `185.7.214.37` in VPN, firewall, and IPS controls.
 5. Block the phishing URL path in proxy/SWG controls.
-6. Block sender email `rebecca@princetonmercer.org` in the email gateway.
+6. Block sender email `reb@tonmercer.org` in the email gateway.
 7. Block sender domain `princetonmercer.org` if no business requirement exists.
 8. Search and quarantine/remove related emails from all affected mailboxes.
 9. Add all IOCs to SIEM watchlists and correlation rules.
@@ -366,7 +366,7 @@ Escalate to **SOC L2 / Identity Team** if any of the following are identified:
 
 ## Final Ticket Closure Comment
 
-SOC investigated ticket **CS-058 — Phishing Email with Credential Harvesting Attempt** reported by **Brian Lee**. The phishing email was sent from `rebecca@princetonmercer.org` with the subject **Distribution Remittance 84,300.09 Process_Ref.3hdhbsnn34n24jszmfbshn4vahdeh4**. Email gateway logs confirmed delivery to seven internal users: `myra.raju@abc.com`, `william.rao@abc.com`, `ajay.collins@abc.com`, `samuel.jain@abc.com`, `rakesh.chauhan@abc.com`, `sneha.khanna@abc.com`, and `brian.lee@abc.com`. The embedded URL used GrowthZone infrastructure and pointed to `https://princetonmercerregionalchamberofcommerce.growthzoneapp.com/ap/r/99a0a6caa8a74d3b9e2e07ecc4ce9bf1`. Proxy logs confirmed multiple users accessed the phishing page, with repeated activity for Brian Lee, Sneha Khanna, and Rakesh Chauhan. POST activity was observed during investigation, indicating possible credential submission. Suspicious VPN authentication attempts were later observed from `185.7.214.37`, where password authentication was initiated, MFA challenges were generated, OTP prompts were sent, and MFA failed. No successful VPN session, endpoint compromise, malware execution, lateral movement, or data exfiltration was confirmed. Ticket closed as **True Positive — Credential Harvesting Attempt / MFA Prevented Unauthorized VPN Access**, with password reset, session revocation, phishing email quarantine, IOC blocking, user awareness, and 2–3 days of monitoring recommended.
+SOC investigated ticket **CS-058 — Phishing Email with Credential Harvesting Attempt** reported by **Brian Lee**. The phishing email was sent from `reb@tonmercer.org` with the subject **Distribution Remittance 84,300.09 Process_Ref.3hdhbsnn34n24jszmfbshn4vahdeh4**. Email gateway logs confirmed delivery to seven internal users: `myra.raju@abc.com`, `william.rao@abc.com`, `ajay.collins@abc.com`, `samuel.jain@abc.com`, `rakesh.chauhan@abc.com`, `sneha.khanna@abc.com`, and `brian.lee@abc.com`. The embedded URL used GrowthZone infrastructure and pointed to `https://princetonmercerregionalchamberofcommerce.growthzoneapp.com/ap/r/99a0a6caa8a74d3b9e2e07ecc4ce9bf1`. Proxy logs confirmed multiple users accessed the phishing page, with repeated activity for Brian Lee, Sneha Khanna, and Rakesh Chauhan. POST activity was observed during investigation, indicating possible credential submission. Suspicious VPN authentication attempts were later observed from `185.7.214.37`, where password authentication was initiated, MFA challenges were generated, OTP prompts were sent, and MFA failed. No successful VPN session, endpoint compromise, malware execution, lateral movement, or data exfiltration was confirmed. Ticket closed as **True Positive — Credential Harvesting Attempt / MFA Prevented Unauthorized VPN Access**, with password reset, session revocation, phishing email quarantine, IOC blocking, user awareness, and 2–3 days of monitoring recommended.
 
 ## Skills Demonstrated
 
